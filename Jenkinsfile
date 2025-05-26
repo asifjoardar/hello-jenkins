@@ -17,7 +17,7 @@ pipeline {
 
                         echo "Starting new instance..."
                         cd \$JAR_DIR
-                        java -jar \$JAR_NAME
+                        nohup java -jar \$JAR_NAME > \$JAR_DIR/app.log 2>&1 &
                     """
                 }
             }
